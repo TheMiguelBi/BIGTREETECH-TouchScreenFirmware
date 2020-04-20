@@ -25,7 +25,7 @@
  *
  * Default value is: 1 for LED_OFF
 */
-#define STARTUP_KNOB_LED_COLOR 1         // LED_OFF
+#define STARTUP_KNOB_LED_COLOR 6         // LED_OFF - 6 color Green
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Keeps the LED state in Marlin Mode
 
 /**
@@ -44,7 +44,7 @@
  *              7: LCD_DIM_300_SECONDS, 8: LCD_DIM_CUSTOM_SECONDS
  *
  */
-#define DEFAULT_LCD_BRIGHTNESS      11  // 11: LCD_100_PERCENT - Brightness value from list
+#define DEFAULT_LCD_BRIGHTNESS      8  // 11: LCD_100_PERCENT - Brightness value from list
 #define DEFAULT_LCD_IDLE_BRIGHTNESS 2   // 2: LCD_10_PERCENT - Brightness value from list
 #define DEFAULT_LCD_IDLE_TIMER      1   // 1: LCD_DIM_OFF
 #define LCD_DIM_CUSTOM_SECONDS      600 // Custom value in seconds. Will be used if
@@ -110,7 +110,7 @@
  *
  * Options: ARMENIAN, CHINESE, CZECH, DUTCH, ENGLISH, FRENCH, GERMAN, HUNGARIAN, ITALIAN, JAPANESE, POLISH, PORTUGUESE, RUSSIAN, SLOVAK, SPAIN
  */
-#define DEFAULT_LANGUAGE ENGLISH
+#define DEFAULT_LANGUAGE ITALIAN
 
 /**
  *  Show bootscreen when starting up
@@ -164,22 +164,22 @@
 #define AXIS_DISPLAY_ID  {"X",  "Y",  "Z",   "E",  "E2"}
 
 // Default move speed mm/min
-#define DEFAULT_SPEED_MOVE      3000
+#define DEFAULT_SPEED_MOVE      2000
 #define SPEED_MOVE_SLOW         1000
-#define SPEED_MOVE_FAST         5000
+#define SPEED_MOVE_FAST         3000
 
 // Extrude speed mm/min
 #define EXTRUDE_SLOW_SPEED      60
-#define EXTRUDE_NORMAL_SPEED    600
-#define EXTRUDE_FAST_SPEED      1200
+#define EXTRUDE_NORMAL_SPEED    150
+#define EXTRUDE_FAST_SPEED      300
 
 // Size of machine
 #define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 235
-#define Y_MAX_POS 235
-#define Z_MAX_POS 250
+#define X_MAX_POS 300
+#define Y_MAX_POS 200
+#define Z_MAX_POS 185
 
 // Specify a pause position as { X, Y, Z_raise }
 #define NOZZLE_PAUSE_RETRACT_LENGTH 15   // (mm)
@@ -187,8 +187,8 @@
 #define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 10)  // (mm) Must be an integer
 #define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 10)  // (mm) Must be an integer
 #define NOZZLE_PAUSE_Z_RAISE        20   // (mm)
-#define NOZZLE_PAUSE_E_FEEDRATE     6000 // (mm/min) retract & purge feedrate
-#define NOZZLE_PAUSE_XY_FEEDRATE    6000 // (mm/min) X and Y axes feedrate
+#define NOZZLE_PAUSE_E_FEEDRATE     150 // (mm/min) retract & purge feedrate
+#define NOZZLE_PAUSE_XY_FEEDRATE    2000 // (mm/min) X and Y axes feedrate
 #define NOZZLE_PAUSE_Z_FEEDRATE     600  // (mm/min) Z axis feedrate
 
 /**
@@ -203,17 +203,17 @@
  * Manual Leveling
  * Move to four corner points to Leveling manually (Point 1, Point 2, Point 3, Point 4)
  */
-#define LEVELING_POINT_1_X         (X_MIN_POS + 20)
-#define LEVELING_POINT_1_Y         (Y_MIN_POS + 20)
-#define LEVELING_POINT_2_X         (X_MAX_POS - 20)
-#define LEVELING_POINT_2_Y         (Y_MIN_POS + 20)
-#define LEVELING_POINT_3_X         (X_MAX_POS - 20)
-#define LEVELING_POINT_3_Y         (Y_MAX_POS - 20)
-#define LEVELING_POINT_4_X         (X_MIN_POS + 20)
-#define LEVELING_POINT_4_Y         (Y_MAX_POS - 20)
+#define LEVELING_POINT_1_X         (X_MIN_POS + 30)
+#define LEVELING_POINT_1_Y         (Y_MIN_POS + 30)
+#define LEVELING_POINT_2_X         (X_MAX_POS - 30)
+#define LEVELING_POINT_2_Y         (Y_MIN_POS + 30)
+#define LEVELING_POINT_3_X         (X_MAX_POS - 30)
+#define LEVELING_POINT_3_Y         (Y_MAX_POS - 30)
+#define LEVELING_POINT_4_X         (X_MIN_POS + 30)
+#define LEVELING_POINT_4_Y         (Y_MAX_POS - 30)
 #define LEVELING_POINT_Z           0.2f  // Z-axis position when nozzle stays for leveling
 #define LEVELING_POINT_MOVE_Z      10.0f // Z-axis position when nozzle move to next point
-#define LEVELING_POINT_XY_FEEDRATE 6000  // (mm/min) X and Y axes move feedrate
+#define LEVELING_POINT_XY_FEEDRATE 2000  // (mm/min) X and Y axes move feedrate
 #define LEVELING_POINT_Z_FEEDRATE  600   // (mm/min) Z axis move feedrate
 
 // Power Supply
